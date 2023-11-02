@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido</title>
+
+    <style>
+        body {
+            background-color: #ff7f81;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #container {
+            width: 80%; /* Defina a largura como a porcentagem desejada */
+            max-width: 300px; /* Defina uma largura máxima para evitar que fique muito largo em telas grandes */
+            padding: 10px;
+            text-align: center;
+            background-color: #ff7f81;
+        }
+
+        #container a {
+            text-decoration: none;
+            color: #ff5c71;
+        }
+
+        button {
+            padding: 3px;
+            width: 100px;
+            height: 30px;
+            color: #ff5c71;
+            background: #141325;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h2>Me da o seu C*?</h2>
+        <button><a href="https://www.youtube.com/watch?v=BP7EyOGnB20">Sim</a></button>
+        <button onmouseover="desvia(this)">Não</button>
+    </div>
+
+    <script>
+        function desvia(btn) {
+            btn.style.position = 'absolute';
+            btn.style.bottom = geraPosicao(10, 90);
+            btn.style.left = geraPosicao(10, 90);
+            console.log('opa, desviei...');
+        }
+
+        function geraPosicao(min, max) {
+            return (Math.random() * (max - min) + min) + "%";
+        }
+    </script>
+</body>
+</html>
